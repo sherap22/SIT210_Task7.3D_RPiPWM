@@ -1,24 +1,24 @@
 from gpiozero import DistanceSensor
 from time import sleep
-
 from gpiozero import PWMLED
 
 led = PWMLED(18)
 
 sensor = DistanceSensor(echo=21, trigger=22)
 while True:
-dist = sensor.distance * 100
-print('Distance: ', dist)
-sleep(1)
-if dist < 20.0 and dist > 15.0:
-led.value = 0.2
-sleep(1)
-elif dist < 15.0 and dist > 10.0:
-led.value = 0.5
-sleep(1)
-elif dist < 10.0:
-led.value = 1
-sleep(1)
+
+    dist = sensor.distance * 100
+    print('Distance: ', dist)
+    sleep(1)
+    if dist < 20.0 and dist > 15.0:
+        led.value = 0.2
+        sleep(1)
+    elif dist < 15.0 and dist > 10.0:
+        led.value = 0.5
+        sleep(1)
+    elif dist < 10.0:
+        led.value = 1
+        sleep(1)
 
 else:
     led.value = 0
