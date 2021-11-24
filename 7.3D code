@@ -13,10 +13,10 @@ sleep(1)
 if dist < 20.0 and dist > 15.0:
 led.value = 0.2
 sleep(1)
-elif dist < 15.0 and dist > 9.0:
+elif dist < 15.0 and dist > 10.0:
 led.value = 0.5
 sleep(1)
-elif dist < 9.0:
+elif dist < 10.0:
 led.value = 1
 sleep(1)
 
